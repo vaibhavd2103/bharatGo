@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import HomeHeader from "../components/HomeHeader";
@@ -6,6 +6,7 @@ import SmallHomeCard from "../components/SmallHomeCard";
 import { DIMENSIONS } from "../constants/constants";
 import HomeEnhanceCard from "../components/HomeEnhanceCard";
 import { AntDesign, Feather, MaterialCommunityIcons } from "@expo/vector-icons";
+import HomeMetricsCard from "../components/HomeMetricsCard";
 
 const Home = (props) => {
 	return (
@@ -49,9 +50,10 @@ const Home = (props) => {
 					icon={<AntDesign name="staro" size={24} color="black" />}
 				/>
 			</View>
-			<View style={{ marginVertical: 20, width: "100%" }}>
+			<ScrollView style={{ flex: 1 }}>
 				<HomeEnhanceCard navigation={props.navigation} />
-			</View>
+				<HomeMetricsCard />
+			</ScrollView>
 		</View>
 	);
 };

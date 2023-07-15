@@ -3,6 +3,7 @@ import React from "react";
 // import { Progress } from "native-base";
 import { ProgressBar, MD3Colors } from "react-native-paper";
 import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
+import { DIMENSIONS } from "../constants/constants";
 
 const HomeEnhanceCard = ({ navigation }) => {
 	return (
@@ -13,7 +14,8 @@ const HomeEnhanceCard = ({ navigation }) => {
 				borderWidth: 1,
 				borderColor: "#0002",
 				// padding: 15,
-				width: "100%",
+				width: DIMENSIONS.WIDTH - 30,
+				marginVertical: 20,
 			}}
 			onPress={() => {
 				navigation?.navigate("EnhanceMini");
